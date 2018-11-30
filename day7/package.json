@@ -1,0 +1,28 @@
+{
+  "name": "day7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "base": "webpack --config config/webpack.dev.js",
+    "dev": "webpack-dev-server --config config/webpack.dev.js --hot --open",
+    "start": "npm run dev",
+    "build": "webpack --config config/webpack.prod.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.0-beta.0",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.3.1",
+    "style-loader": "^0.23.1",
+    "vue": "^2.5.17",
+    "webpack": "^4.20.2",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^4.1.4"
+  }
+}

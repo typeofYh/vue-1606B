@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>颜色</button>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script src="./object.js"></script>
+    <script>
+        // let c = 20;
+
+        // function a({
+        //     x: n,
+        //     y = 10
+        // }) {
+        //     console.log(n, y);
+        // }
+
+        // a({
+        //     x: 10
+        // });
+
+
+
+        // let [a, b = 10] = [1, null];
+        // console.log(a, b);
+
+
+        // function sum(tit, ...n) {
+        //     return tit + n.reduce(function(a, b) {
+        //         return a + b
+        //     })
+        // }
+
+
+
+
+        // => function()
+
+        //可以箭头函数嵌套箭头函数
+        //(形参1,形参2) => {操作}
+        //形参1 => {}
+
+
+        // let sum = (tit, ...n) => tit + n.reduce((next, prev) => next + prev);
+        // console.log(sum('求和', 10, 304, 45, 45));
+
+
+        // let sayTitle = str => ({
+        //     name: str
+        // });
+        // console.log(sayTitle('zs'));
+        // // var name = 'window';
+
+
+        // let obj = {
+        //     name: 'zs',
+        //     sayname() {
+        //         console.log(this);
+        //         setTimeout(() => {
+        //             console.log(this.name);
+        //         }, 100)
+        //     }
+        // };
+
+        // obj.sayname(); //obj
+
+
+        // class Setstyle {
+        //     constructor(col, btn) {
+        //         this.col = col;
+        //         this.btn = btn;
+        //         this.addEvent();
+        //     }
+        //     addEvent() {
+        //         console.log(this);
+        //         this.btn.onclick = () => {
+        //             document.body.style.background = this.col;
+        //         }
+        //     }
+        // };
+
+        // new Setstyle('red', document.querySelector('button'));
+
+
+        // let a = function() {
+        //     console.log(this.name)
+        // };
+        // let a1 = {
+        //     name: "zs"
+        // };
+
+        // a.call(a1);  //bind
+        //a1::a()
+
+        let a1 = [1, 2, 3];
+        let a2 = [].concat(a1);
+        a2.push(4);
+        console.log(a2, a1);
+    </script>
+</body>
+
+</html>

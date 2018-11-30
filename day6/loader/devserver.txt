@@ -1,0 +1,29 @@
+cnpm i webpack-dev-server --save-dev
+
+moudle.exports = {
+    devServer:{
+        port:端口号,
+        hot:true 启动热更新  --hot
+        inline:true 实时刷新  --inline
+        open:true, 打开
+        setup(app){ 相应
+            app{
+                get
+                post
+            }
+
+            app.get(url,(req,res)=>{
+
+            })
+        }
+
+    }
+}
+
+webpack-dev-server --hot --inline
+
+
+1.引入webpack
+plugins:[
+   new webpack.HotModuleReplacementPlugin()  //启用模块热替换
+]

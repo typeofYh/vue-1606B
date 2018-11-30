@@ -1,0 +1,14 @@
+1.引入vue-router,返回构造器
+2.new VueRouter({
+    routes:[{
+        path:跳转路径,
+        component:当前路径要显示的组件
+    }]
+})
+
+<router-link to="路径"></router-link>
+<router-view></router-view>  路由出口 要展示的组件
+
+
+注册方法
+Vue.use(函数VueRouter)

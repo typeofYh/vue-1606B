@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        body,
+        html,
+        .wrap,
+        .loading {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .loadingbox {
+            width: 90%;
+            height: 20px;
+            background: #ccc;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            transform: translate(5%, -50%);
+            overflow: hidden;
+        }
+        
+        .loadingcur {
+            width: 0;
+            text-align: center;
+            line-height: 20px;
+            color: #000;
+            background: yellow;
+            font-size: 12px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="loading">
+            <div class="loadingbox">
+                <div class="loadingcur"></div>
+            </div>
+        </div>
+        <div class="content">
+            <ul></ul>
+        </div>
+    </div>
+    <script src="js/picload.js"></script>
+    <script>
+        const data = ['http://img.zcool.cn/community/0117e2571b8b246ac72538120dd8a4.jpg@1280w_1l_2o_100sh.jpg', 'http://img.zcool.cn/community/01f09e577b85450000012e7e182cf0.jpg@1280w_1l_2o_100sh.jpg', 'http://img.zcool.cn/community/0125fd5770dfa50000018c1b486f15.jpg@1280w_1l_2o_100sh.jpg', 'http://pic.58pic.com/58pic/13/74/51/99d58PIC6vm_1024.jpg', 'http://pic.58pic.com/58pic/15/63/07/42Q58PIC42U_1024.jpg', 'http://img.zcool.cn/community/01f76f5a4b4aa2a801219741c7bde1.jpg@1280w_1l_2o_100sh.jpg'];
+
+        new Process('.loading', data);
+    </script>
+</body>
+
+</html>

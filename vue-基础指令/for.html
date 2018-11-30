@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul>
+            <li v-for="val in title">{{val}}</li>
+        </ul>
+        <span v-for="i in 10">{{i}}</span>
+
+        <ol>
+            <li v-for="item in cont">{{item.name}}{{item.age}}</li>
+        </ol>
+
+        <p v-for="(item,key,index) in obj">{{key}} = {{item}} : {{index}}</p>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: ".wrap",
+            data: {
+                title: ["网站", "传媒", "网工", "云计算"],
+                cont: [{
+                    name: "任月宁",
+                    age: 40
+                }, {
+                    name: "司振雷",
+                    age: 38
+                }],
+                obj: {
+                    title: "1608B",
+                    number: 39
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

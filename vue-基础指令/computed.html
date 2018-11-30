@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{info}} </p>
+        <p>{{address}}</p>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                age: 18,
+                name: "李四",
+                area: "海淀区",
+                jiedao: "上地七街"
+            },
+            computed: { //计算
+                info() {
+                    return '姓名' + this.name + '---年龄' + this.age
+                },
+                address: {
+                    get() {
+                        return this.area + this.jiedao
+                    },
+                    set(obj) {
+                        this.area = obj.area;
+                        this.jiedao = obj.res;
+                    }
+                }
+            }
+        });
+        vm.address = {
+            area: "河北",
+            res: "石家庄"
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var arr = [];
+        // for (var i = 0; i < 10; i++) {
+        //     (function(n) {
+        //         arr.push(function() {
+        //             console.log(n);
+        //         })
+        //     })(i);
+        // };
+        // arr.forEach(function(fun) {
+        //     fun();
+        // })
+
+        class Cash {
+            constructor(val) {
+                this.val = val;
+            }
+            add(n) {
+                // console.log(this); //cash1
+                // console.log(n); //cash2
+                var sum = this.val + n.val + ''; //171
+                return sum[0] + '元' + sum[1] + '角' + sum[2] + '分';
+            }
+            static add(...obj) { //[obj1,obj2]
+                var sum = obj.reduce((prev, next) => prev.val + next.val) + '';
+                return sum[0] + '元' + sum[1] + '角' + sum[2] + '分';
+            }
+            toString() {
+                var sum = this.val + '';
+                return sum[0] + '元' + sum[1] + '角' + sum[2] + '分';
+            }
+            valueOf() {
+                return this.val;
+            }
+        };
+
+
+        const cash1 = new Cash(105);
+        const cash2 = new Cash(66);
+
+        const cash3 = cash1.add(cash2);
+        const cash4 = Cash.add(cash1, cash2);
+        // cash1 + cash2  = 171 
+        const cash5 = new Cash(cash1 + cash2);
+        console.log(`${cash3}`, `${cash4}`, `${cash5}`);
+        //
+    </script>
+</body>
+
+</html>

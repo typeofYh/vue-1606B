@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: "黑体";
+    background: #eee;
+}
+
+#app,
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+    overflow: auto;
+    width: 100%;
+}
+
+img {
+    display: inline-block;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+#top {
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    background: #fff;
+    z-index: 998;
+}
+
+.top {
+    width: 72%;
+    margin: 0 auto;
+    line-height: 43px;
+    color: #aacc36;
+    font-size: 19px;
+    text-align: center;
+}
+
+.top span {
+    float: right;
+    font-size: 14px;
+}
+
+.content {
+    width: 414px;
+    margin: 0 auto;
+    padding-top: 44px;
+}
+
+.content h3 {
+    overflow: hidden;
+    line-height: 48px;
+    border-bottom: 1px solid #ccc;
+    color: rgb(153, 153, 153);
+    padding: 0 15px;
+    font-weight: normal;
+    background: #fff;
+}
+
+.list {
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.list li {
+    line-height: 44px;
+    margin-left: 15px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.list li div,
+.list li span,
+.list li img {
+    vertical-align: middle;
+}
+
+.check {
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.check.checked {
+    background: url(../img/checked.png) no-repeat center center orange;
+    background-size: 22px 22px;
+}
+
+.pic {
+    width: 80px;
+}
+
+.disc {
+    display: inline-block;
+}
+
+.disc p {
+    line-height: 1.8;
+}
+
+.disc .name {
+    font-size: 18px;
+}
+
+.disc .weight {
+    font-size: 15px;
+}
+
+.disc .price {
+    font-size: 20px;
+    color: rgb(255, 144, 13);
+    font-weight: bold;
+}
+
+.computed {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    overflow: hidden;
+    width: 81px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-right: 0;
+}
+
+.computed div {
+    width: 26px;
+    border-right: 1px solid #ccc;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+
+.list .last {
+    border-bottom: 0;
+}
+
+.list .baoyou {
+    border-bottom: 0;
+    line-height: 46px;
+    border-top: 1px solid #ccc;
+    padding-left: 15px;
+    margin-left: 0px;
+}
+
+.baoyou span {
+    line-height: 1.2;
+    display: inline-block;
+    padding: 5px 10px;
+    vertical-align: middle;
+    position: relative;
+    border-radius: 5px;
+    top: -3px;
+}
+
+.baoyou .label {
+    font-size: 18px;
+    color: #fff;
+    background: orange;
+}
+
+.footer {
+    line-height: 55px;
+    padding-left: 77px;
+    background: #fff;
+    z-index: 998;
+}
+
+.total {
+    padding-right: 20px;
+}
+
+.total p {
+    line-height: 1.6;
+    color: rgb(153, 153, 153);
+}
+
+.total #totalPrice {
+    color: orange;
+    font-weight: bold;
+}
+
+.combtn {
+    width: 600px;
+    text-align: center;
+    color: #fff;
+    background: orange;
+    cursor: pointer;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        .title {
+            width: 300px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            display: flex;
+        }
+        
+        .title li {
+            flex: 1;
+            height: 100%;
+            text-align: center;
+        }
+        
+        .title li.active {
+            background: red;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <ul class="title">
+            <li v-for="(item,index) in cont" :class="{active:index==ind}" @click="change(index)">{{item.name}}</li>
+        </ul>
+        <div class="content">
+            {{cont[ind].age}}
+        </div>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                ind: 0, //默认显示下标
+                cont: [{
+                    name: "任月宁",
+                    age: 50
+                }, {
+                    name: "司振雷",
+                    age: 38
+                }]
+            },
+            methods: {
+                change(i) {
+                    this.ind = i;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

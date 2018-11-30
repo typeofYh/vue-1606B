@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="table-box">
+        <div class="table-title"></div>
+        <div class="table-cont">
+            <ul></ul>
+        </div>
+    </div>
+    <script src="js/ajax.js"></script>
+    <script src="js/table.js"></script>
+    <script>
+        // ajax('/api/title').then(data => {
+        //     new Table('.table-box', data)
+        // })
+        async function render() {
+            let data = await ajax('/api/title');
+            new Table('.table-box', JSON.parse(data));
+        }
+
+        render();
+    </script>
+</body>
+
+</html>

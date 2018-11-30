@@ -1,0 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.wrap {
+    width: 200px;
+    height: 150px;
+    background: url(../images/65EBF3CBD2B5D864457EE9984EED7363.png);
+    background-size: cover;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        
+        ul,
+        li {
+            list-style: none;
+        }
+        
+        em {
+            font-style: normal;
+        }
+        
+        body {
+            background: #efefef;
+        }
+        
+        .wrap {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            /* position: relative; */
+        }
+        
+        .wrap h2 {
+            text-align: center;
+            margin-top: 10%;
+        }
+        
+        .priceBox {
+            width: 80%;
+            height: 50px;
+            line-height: 50px;
+            margin: 20px auto;
+            border: solid 1px #ccc;
+            background: #fff;
+            border-radius: 5px;
+        }
+        
+        .priceBox em {
+            width: 20%;
+            display: block;
+            float: left;
+            text-align: center;
+        }
+        
+        .priceBox span {
+            width: 60%;
+            display: block;
+            float: left;
+            text-align: center;
+        }
+        
+        .keyBox {
+            width: 100%;
+            height: 160px;
+            background: #fff;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            display: none;
+        }
+        
+        .left {
+            width: 75%;
+            float: left;
+            box-sizing: border-box;
+        }
+        
+        .left li {
+            height: 40px;
+            line-height: 40px;
+            width: 33.3%;
+            float: left;
+            border-left: solid 1px #ccc;
+            border-bottom: solid 1px #ccc;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .right {
+            width: 25%;
+            float: left;
+            box-sizing: border-box;
+            border-left: solid 1px #ccc;
+        }
+        
+        .right p {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            border-bottom: solid 1px #ccc;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 17px;
+            color: #555;
+        }
+        
+        .right h4 {
+            height: 120px;
+            line-height: 120px;
+            box-sizing: border-box;
+            text-align: center;
+            background: green;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap box">
+        <h2>兰州拉面北京安贞桥店</h2>
+        <div class="priceBox">
+            <em>金额</em>
+            <span class="price" contenteditable="true"></span>
+            <em style="float: right;">¥</em>
+        </div>
+        <div class="keyBox">
+            <ul class="left">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li style="width:66.6%;">0</li>
+                <li class="dian">.</li>
+            </ul>
+
+            <div class="right">
+                <p class="rem">退格</p>
+                <h4 class="qrBtn">确认</h4>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

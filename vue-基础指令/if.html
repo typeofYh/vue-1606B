@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .dialog {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="price"><button v-on:click="showdialog">充值</button>
+        <div v-if="price < 200 && price > 100">青铜</div>
+        <div v-else-if="price < 300 && price >= 200">白银</div>
+        <div v-else-if="price < 400 && price >= 300">黄金</div>
+        <div v-else="price >= 400">钻石</div>
+        <div v-show="flag" class="dialog">恭喜您充值成功：{{price}}</div>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                flag: false,
+                price: 102
+            },
+            methods: {
+                showdialog() {
+                    this.flag = true;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

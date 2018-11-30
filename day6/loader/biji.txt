@@ -1,0 +1,31 @@
+extract-text-webpack-plugin
+use:
+提取css文件
+module:{
+    rules:[
+        {
+            test:匹配文件类型 正则
+            exclude: 过滤文件 正则
+            options:{  配置
+
+            },
+            loader: //loader 只需要加载一种
+            use:[string|object{
+                loader:
+                options
+                exclude
+            }]
+        }
+    ]
+}
+plugins:[
+
+]
+
+html-webpack-plugin
+自动引入打包后的文件（入口文件引入的文件）
+{
+    template:原文件 原文件路径
+    filename:输出的文件名称
+    inject:注入文件位置 "body"
+}

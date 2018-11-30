@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(val,index) in list">
+                <input type="checkbox" :checked="val.flag" @click="checkevent(index)">
+                <h2 v-text="val.name"></h2>
+            </li>
+        </ul>
+        <input type="checkbox" :checked="isall" @click="all"> 全选
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                isall: false,
+                list: [{
+                    name: "苹果",
+                    flag: false
+                }, {
+                    name: "香蕉",
+                    flag: false
+                }, {
+                    name: "葡萄",
+                    flag: false
+                }, {
+                    name: "桃子",
+                    flag: false
+                }]
+            },
+            methods: {
+                all() {
+                    this.isall = !this.isall;
+                    this.list.forEach(item => {
+                        item.flag = this.isall;
+                    })
+                },
+                checkevent(i) {
+                    this.list[i].flag = !this.list[i].flag;
+                    this.isall = this.list.every(item => item.flag === true);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

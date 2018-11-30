@@ -1,0 +1,16 @@
+async 
+
+async function name(){
+   var 2 =  await 1
+   await 3
+}
+
+name();
+
+var name = async function(){
+
+}
+
+async返回一个promise对象 
+内部return返回到resolve参数
+catch

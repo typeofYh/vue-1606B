@@ -1,0 +1,11 @@
+@import "../fonts2/iconfont.css";
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.bg {
+    background-repeat: no-repeat;
+    background-image: url(../img/banner1.png);
+}
